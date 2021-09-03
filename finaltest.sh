@@ -7,7 +7,7 @@ getSubstitution(){
 	colnum=$1  # first argument for column number
 	colavg=$2  # second argument for column's mean value
   
-  # replaces white-spaces with that column average
+  # replaces white-spaces with the column average
   cat $filename | cut -d',' -f$colnum | sed "s/^\s*$/$colavg/g" > tmp.txt
   
   if [[ ! -e $editedfile ]] 
