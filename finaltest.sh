@@ -7,6 +7,7 @@ getSubstitution(){
 	colnum=$1  # first argument for column number
 	colavg=$2  # second argument for column's mean value
   
+  # replaces white-spaces with that column average
   cat $filename | cut -d',' -f$colnum | sed "s/^\s*$/$colavg/g" > tmp.txt
   
   if [[ ! -e $editedfile ]] 
@@ -27,6 +28,8 @@ getStatistics(){
 	for ((i=1; i<=cols; i++))
 	do
 	
+	# tail -n +2 eliminates header file
+	# sed '/^\s*$/d' eliminates white-spaces
 	max=$(cat $filename | tail -n +2 | cut -d',' -f$i | sed '/^\s*$/d' | sort | tail -1)
 	min=$(cat $filename | tail -n +2 | cut -d',' -f$i | sed '/^\s*$/d' | sort | head -1)
 	avg=$(cat $filename | tail -n +2 | cut -d',' -f$i | sed '/^\s*$/d' | awk '{sum+=$1; ++n} END {print 	sum/NR}')
