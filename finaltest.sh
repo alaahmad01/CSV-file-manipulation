@@ -1,8 +1,4 @@
 #Alaa Ahmed 1183339
-#Anan Zein 1193078
-
-#LINUX LABARTORY ENCS3130
-#DR.MOHAMMAD JUBRAN
 
 
 # function to replace the null values in columns of the data file
