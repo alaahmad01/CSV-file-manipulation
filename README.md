@@ -16,6 +16,7 @@ of operation he wants to proceed with, the program gives the user three main opt
 finding the dimension of the program, C to run some statistics basic statistics for the data file and
 S to do basic file correction by substituting missing column values with the mean of that column.
 The user is always given the choice of existing the program by inputting E.
+
 The program is structured to make all functions dependent on each other, that is, if you want to
 substitute missing values, the functions to find the dimension and the computing statistics will be
 executed if they weren’t executed before. This led to reducing the lines of the program and thus
@@ -33,3 +34,6 @@ specifies columns in each row by separating their values with a comma “,”. B
     4.7,3.2,1.3,
     4.6,3.1,1.4,0.2
     5,3.6,1.4,0.1
+    
+Run the code on your linux maxhine by typing into the terminal:
+>$ ./main.sh
