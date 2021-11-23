@@ -1,4 +1,4 @@
-# CSV-file-manipulation
+# Text-Manipulation-In-Shell
 
 ### Program Structure
 
